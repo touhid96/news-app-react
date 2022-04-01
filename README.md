@@ -73,4 +73,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## Live Link
 
-https://stately-eclair-6e4f90.netlify.app/
+https://newshour24.netlify.app/
