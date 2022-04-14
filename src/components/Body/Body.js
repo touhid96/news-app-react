@@ -11,10 +11,15 @@ const Body = () => {
       .then((res) => res.json())
       .then((data) => setArticle(data.articles));
   }, []);
+  console.log(article);
 
   return (
     <div className="body">
-      {article === null ? <LoadingSpinner /> : article.map((item) => <News article={item} />)}
+      {article === null ? (
+        <LoadingSpinner />
+      ) : (
+        article.map((item) => <News article={item} key={item.content} />)
+      )}
     </div>
   );
 };
