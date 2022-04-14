@@ -4,7 +4,7 @@ import LoadingSpinner from "./LoadingSpinner";
 import News from "./News/News";
 
 const Body = () => {
-  const [article, setArticle] = useState([]);
+  const [article] = useState([]);
 
   // useEffect(() => {
   //   fetch("https://newsapi.org/v2/top-headlines?country=us&apiKey=5e005fc4211a49ac956db9183c8466ef")
