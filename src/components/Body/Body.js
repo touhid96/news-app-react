@@ -9,7 +9,8 @@ const Body = () => {
   useEffect(() => {
     fetch("https://newsapi.org/v2/top-headlines?country=us&apiKey=346c7bdd368b4b0fb5724669204c3d81")
       .then((res) => res.json())
-      .then((data) => setArticle(data.articles));
+      .then((data) => setArticle(data.articles))
+      .catch((error) => console.error(error));
   }, []);
   console.log(article);
 
