@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../App.css";
+import { newsData } from "./fakeData";
 import LoadingSpinner from "./LoadingSpinner";
 import News from "./News/News";
 
 const Body = () => {
-  const [article] = useState([]);
+  // const [article, setArticle] = useState(newsData);
 
   // useEffect(() => {
   //   fetch("https://newsapi.org/v2/top-headlines?country=us&apiKey=5e005fc4211a49ac956db9183c8466ef")
@@ -12,14 +13,15 @@ const Body = () => {
   //     .then((data) => setArticle(data.articles))
   //     .catch((error) => console.error(error));
   // }, []);
-  console.log(article);
+
+  // console.log(article);
 
   return (
     <div className="body">
-      {article === null ? (
+      {newsData === null ? (
         <LoadingSpinner />
       ) : (
-        article.map((item) => <News article={item} key={item.content} />)
+        newsData.map((item) => <News article={item} key={item.content} />)
       )}
     </div>
   );
