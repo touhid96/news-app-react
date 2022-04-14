@@ -7,7 +7,7 @@ const Body = () => {
   const [article, setArticle] = useState([]);
 
   useEffect(() => {
-    fetch("https://newsapi.org/v2/top-headlines?country=us&apiKey=346c7bdd368b4b0fb5724669204c3d81")
+    fetch("https://newsapi.org/v2/top-headlines?country=us&apiKey=5e005fc4211a49ac956db9183c8466ef")
       .then((res) => res.json())
       .then((data) => setArticle(data.articles))
       .catch((error) => console.error(error));
